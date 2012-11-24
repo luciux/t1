@@ -13,38 +13,34 @@
 	
 	$numAcessos = $acesso->numVisitas();
 	
+	$true = 1010; // para saber que jogador 1 é bolinha, funciona como um código
 	
 	echo"<p>$numAcessos</p>";
 	
-	echo "<p>http://localhost/t2/jogador.php?id=$numAcessos</p>";
+	echo "<p>http://localhost/t1/jogador.php?id=$numAcessos&selecao=$true</p>";
 	
 	echo'<form action="jogo.php" method="POST">';
 		
-		echo'<p> NAME(PLAYER 1) <input type="text" name="nomeJogador1"/> </p>';
+		echo'<p>NAME(PLAYER 1)<input type="text" name="nomeJogador1"/></p>';
 		
- 		
+		echo '<input type="hidden" name="selecao" value="bolinha"/>';		
+		echo'<input type="hidden" name="keyplayer1" value="'.$numAcessos.'"/>';
 		
-		echo '<d1><dd>';
-			echo '<input type="radio" name="selecao" value="bolinha" checked/>O';
-			echo '<input type="radio" name="selecao" value="xis"/>X';
-			 			
-			echo'<input type="hidden" name="keyplayer1" value="'.$numAcessos.'" />';
-			echo '<p> <input type="submit" value"Play!"/> </p>';
+		echo '<p> <input type="submit" value"Play!"/> </p>';
+	echo '</form>';
+		
+	if(isset($_SESSION['erro'])){
 			
-		echo'</d1></dd>';
-		echo '</form>';
-		
-		if(isset($_SESSION['erro'])){
-			
-			echo'<p> '.$_SESSION['erro'].' </p>';
-			unset($_SESSION['erro']);
-		}
-		
-		if(isset($_SESSION['errop2'])){
-			
-			echo'<p> '.$_SESSION['errop2'].' </p>';
-			unset($_SESSION['errop2']);
-		}
+		echo'<p> '.$_SESSION['erro'].' </p>';
+		unset($_SESSION['erro']);
+	}
 	
-		rodape();
+	if(isset($_SESSION['errop2'])){
+		
+		echo'<p> '.$_SESSION['errop2'].' </p>';
+		unset($_SESSION['errop2']);
+	}
+
+	rodape();
 ?>
+
