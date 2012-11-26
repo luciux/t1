@@ -1,11 +1,37 @@
 <?php 
+
+	function aterouMatriz($posJogada){
+		$caminho = $_SESSION['matriz'];
+		
+		if(file_exists()){
+			
+			$ponteiro = fopen($caminho, "r");
+			
+			if($ponteiro != NULL){
+				$arrayWords = fgtes($ponteiro);
+				
+				matriz = explode(',', $arrayWords, 9);
+				
+				if(matriz[$posJogada] != 0)
+					return false;
+				else
+					return true;
+			}
+		}
+		
+	}
 	
-	include 'CriarArquivosJogadores.php';
-	
+
+
+
+
+
+
+
+
 	
 	function comecaJogo(){
-
-		if(leStatus(@$_SESSION['file'])){ // se existir o arquivo com o status do jogadores testa se estao okay
+		
 			
 			if(0){
 		

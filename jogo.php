@@ -3,7 +3,7 @@
 	//include 'index.php';
 	
 	session_start();
-	include 'logica.php';
+	include 'Logica.php';
 	include 'CriarArquivosJogadores.php'; 
 	
 	
@@ -24,7 +24,7 @@
 		$_SESSION['ativo'] = 1; // para saber quem esta alterando a matriz;
 		
 		$_SESSION['file'] = $arquivoPlayer1;
-		$varPlayer1 = $_SESSION['nomeJogador1'];
+		$varPlayer1 = $_SESSION['nomeJogador1'].'~1';
 		
 		gravaArquivo1($arquivoPlayer1, $varPlayer1, "on");
 		
@@ -47,7 +47,7 @@
 		$_SESSION['ativo'] = 0;
 		
 		$_SESSION['file'] = $arquivoPlayer2;
-		$varPlayer2 = $_SESSION['nomeJogador2'];
+		$varPlayer2 = $_SESSION['nomeJogador2'].'~0';
 		
 		gravaArquivo2($arquivoPlayer2, $varPlayer2, "on");
 		

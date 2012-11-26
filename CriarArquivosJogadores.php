@@ -64,7 +64,7 @@
 				echo"$words[0]";
 				print_r();
 				if($words[2] == 'on'){
-					echo"$words[2]";
+					echo"$words[3]";
 					return true;
 				}
 			}
