@@ -1,3 +1,4 @@
+
 <?php 
 			
 	function gravaArquivo1($nomeA, $jogador1, $status){
@@ -30,26 +31,6 @@
 		}
 	}
 	
-	function criaMatriz($nomeArquivo){
-		
-		$matriz = '0,0,0,0,0,0,0,0,0';
-		
-		if(file_exists($nomeArquivo)){
-			
-			$ponteiro = fopen($nomeArquivo, "w");
-			fwrite($ponteiro, $matriz);
-			fclose($ponteiro);
-		}		
-		else{
-			$ponteiro = fopen("$nomeArquivo", "w");
-			
-			if($ponteiro != NULL){
-				fwrite($ponteiro, $matriz);
-				fclose($ponteiro);
-			}
-		}
-	}
-	
 	function leStatus($arquivo){
 		
 		
@@ -64,7 +45,7 @@
 				echo"$words[0]";
 				print_r();
 				if($words[2] == 'on'){
-					echo"$words[3]";
+					echo"$words[2]";
 					return true;
 				}
 			}
