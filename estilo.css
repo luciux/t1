@@ -1,0 +1,78 @@
+body{
+	margin: 0 0 0 0;
+	background:url(img/bg_b.png);
+	background-repeat:repeat-x;
+
+}
+
+#central{
+	width:800px;
+	height:800px;
+	margin:0 auto;
+	
+}
+#bancada{
+	background-color:#CCCCCC;
+	width:100%px;
+	height:300px;
+
+}
+
+#botaoJogar{
+	width:400px;
+	height:320px;
+	background:url(img/botao_jogar.png);
+	margin:0 auto;
+	
+}
+#botaoJogar:hover{
+	width:400px;
+	height:320px;
+	background:url(img/botao_jogar_hover.png);
+	margin:0 auto;
+}
+
+#box{
+	width:400px;
+	height:200px;
+	float:left;
+	background-color:green;
+}
+#boxStatus{
+	width:300px;
+	float:right;
+	height:300px;
+	background-color:#e9e9e9;
+}
+input{
+	background-color:#F7F7F7;
+}
+#miniBox{
+	width:100px;
+	height:100px;
+	float:left;
+}
+#container{
+	width:1000px;
+	height:600px;
+	margin:0px auto;
+
+}
+#header{
+	width:800px;
+	height:250px;
+	background-color:transparent;
+	
+}
+#menu{
+	width:1000px;
+	height:30px;
+	background-color:white;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#666666;
+}
+
+#menu a{
+	color:#000000;
+	
+}
